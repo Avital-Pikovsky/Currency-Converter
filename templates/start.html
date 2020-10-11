@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Avital Currency Converter</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div id="header">
+        Currency Converter
+    </div>
+    <div id="content">
+        <label for="amount"> Amount: </label>
+        <input type="text" id="amount" name="amount" placeholder="1 ">
+        <label for="from"> From: </label>
+        <input type="text" id="from" name="from" placeholder="First Currency ">
+        <label for="to"> To: </label>
+        <input type="text" id="to" name="to" placeholder="Second Currency ">
+
+        <div id="buttons">
+            <button class="button" onclick="convert()">Convert </button>
+        </div>
+
+        <table id = "currencies">
+            <tr>
+                <th>Currency</th>
+                <th>Currency Name</th>
+            </tr>
+            
+            <tr>
+
+            </tr>
+
+
+        </table>
+
+        <script>
+
+            function convert() {
+                if(!document.getElementById("from").value || !document.getElementById("to").value)
+                {
+                    alert("empty First Currency or Second Currency")
+                    document.getElementById("from").value = ""
+                    document.getElementById("to").value = ""
+                }
+                else { // Go to /convert
+                    var amount = document.getElementById("amount").value
+                    var from = document.getElementById("from").value
+                    var to = document.getElementById("to").value
+                    window.location.assign("/convert?amount=" + amount + "&from=" + from + "&to=" + to)
+                }
+            }
+        </script>    
+
+        {%block content%}{% endblock %}
+    </div>
+
+</body>
+</html>
