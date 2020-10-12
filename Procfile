@@ -1,1 +1,1 @@
-web: gunicorn currency:app
+web: gunicorn application:app
