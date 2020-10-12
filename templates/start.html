@@ -2,23 +2,32 @@
 <html>
 <head>
     <title>Avital Currency Converter</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"/> 
 </head>
 <body>
     <div id="header">
         Currency Converter
     </div>
     <div id="content">
-        <label for="amount"> Amount: </label>
-        <input type="text" id="amount" name="amount" placeholder="1 ">
-        <label for="from"> From: </label>
-        <input type="text" id="from" name="from" placeholder="First Currency ">
-        <label for="to"> To: </label>
-        <input type="text" id="to" name="to" placeholder="Second Currency ">
+        <table>
+            <tr id="titles">
 
-        <div id="buttons">
-            <button class="button" onclick="convert()">Convert </button>
-        </div>
+                <td><label for="amount"> Amount: </label></td>
+                <td><label for="from"> From: </label></td>
+                <td></td>
+                <td><label for="to"> To: </label></td>
+            </tr>
+            <tr>
+
+                <td> <input type="text" id="amount" name="amount" placeholder="1 "></td>
+                <td><input type="text" id="from" name="from" placeholder="First Currency "></td>
+                <td><img src="https://www.pinclipart.com/picdir/middle/43-431582_right-arrow-no-background-clipart.png"/></td>
+                <td> <input type="text" id="to" name="to" placeholder="Second Currency "></td>
+                <td><button class="button" onclick="convert()">Convert </button></td>
+            
+            </tr>
+        </table>
+        
 
         <!-- <table id = "currencies">
             <tr>

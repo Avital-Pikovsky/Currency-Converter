@@ -20,8 +20,8 @@ def convert():
     if base is None or other is None:	
         return render_template("start.html")
 
-    if amount is None:
-        amount = 1
+    if amount is "":
+        amount = "1"
 
     res = requests.get("https://api.exchangeratesapi.io/latest",
                         params={"base": base, "symbols": other})
