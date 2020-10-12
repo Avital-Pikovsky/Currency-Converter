@@ -52,6 +52,30 @@ button {
     text-align: center;
     font-size: 25px;
 }
+#list {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#list h2 {
+    color: darkgreen;
+    text-align: center;
+
+}
+  
+#list #currency_list {
+    /* border-collapse: collapse; */
+    padding: 15px;
+    border-radius: 8px;
+  
+}
+  
+#list #currency_list td {
+   text-align: center;
+   border: 1px solid black;
+   padding: 10px;
+}
 
 #answer h2{
     background: white;
