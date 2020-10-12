@@ -1,4 +1,4 @@
-# Currency-Converter
+# Currency Converter
 
 CS50 Beyond 2019 - currency converter web app
 
