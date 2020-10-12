@@ -8,12 +8,10 @@ app.secret_key = "Piko Piko"
 
 @app.route("/")
 def main():
-
     return render_template("start.html")
 
 @app.route("/convert")
 def convert():
-
     amount = request.args.get('amount')
     base = request.args.get('from').upper()
     other = request.args.get('to').upper()
@@ -33,6 +31,7 @@ def convert():
     data = res.json()
     rate = data["rates"][other]
     ans = float(amount)*float(rate)
+
 
     return render_template("answer.html", ans = ans, amount = amount, base = base, rate = rate, other = other)
 
