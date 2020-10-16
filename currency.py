@@ -3,8 +3,6 @@ import requests
 
 
 app = Flask(__name__)
-app.secret_key = "Piko Piko"
-
 
 @app.route("/")
 def main():
@@ -29,6 +27,9 @@ def convert():
         return render_template("error.html")
 
     data = res.json()
+    for x in data["rates"]:
+        print(x)
+
     rate = data["rates"][other]
     ans = float(amount)*float(rate)
 
