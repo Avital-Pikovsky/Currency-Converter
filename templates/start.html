@@ -38,6 +38,10 @@
             fetch('https://api.exchangeratesapi.io/latest')
                 .then(response => response.json())
                 .then(data => {
+
+                    From.add(createOption(data.base));
+                    To.add(createOption(data.base));
+
                     Object.keys(data.rates).forEach(key => {
                         var fromOption = createOption(key)
                         From.add(fromOption);
